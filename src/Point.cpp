@@ -30,6 +30,13 @@ void Point::print() const {
     std::cout << "POINT " << posX << " " << posY << std::endl;
 }
 
+std::vector<Pixel> Point::toPixels() const {
+    std::vector<Pixel> pixels;
+    pixels.push_back(Pixel(posX, posY));
+    return pixels;
+}
+
+
 //Méthode pour assigner un point à un autre
 Point& Point::operator=(const Point& other) {
     if (this != &other) {
