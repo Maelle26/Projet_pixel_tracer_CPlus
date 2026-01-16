@@ -28,9 +28,12 @@ public:
     void setPosX(int x) { posX = x; }
     void setPosY(int y) { posY = y; }
 
-    // Méthodes override
+    // Méthode override
     void print() const override;
+
+    // Méthode override
     std::vector<Pixel> toPixels() const override;
+    
 
     // Opérateurs
     Point& operator=(const Point& other);

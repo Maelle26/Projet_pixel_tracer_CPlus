@@ -1,30 +1,38 @@
-//Ficher Area.cpp
 // Area.cpp
 # include "Area.h"
-#include "Pixel.h"
 # include <iostream>
 # include <algorithm>
+#include "Pixel.h"
+
 Area::Area(unsigned int w, unsigned int h)
-        : width(w), height(h), mat(h, std::vector<bool>(w, false)) {}
+: width(w), height(h), mat(h, std::vector<bool>(w, false)) {}
+
+// Méthode pour ajouter une forme à la zone
 void Area::addShape(std::shared_ptr<Shape> shape) {
     shapes.push_back(shape);
 }
+
+// Méthode pour supprimer une forme par son ID
 void Area::removeShape(int id) {
     shapes.erase(
-            std::remove_if(shapes.begin(), shapes.end(),
-                           [id](const std::shared_ptr<Shape>& s) {
-                               return s->getId() == id;
-                           }),
-            shapes.end()
+        std::remove_if(shapes.begin(), shapes.end(),
+            [id](const std::shared_ptr<Shape>& s) {
+                return s->getId() == id;
+            }),
+        shapes.end()
     );
 }
+
+// Méthode pour obtenir une forme par son ID
 std::shared_ptr<Shape> Area::getShape(int id) const {
     auto it = std::find_if(shapes.begin(), shapes.end(),
-                           [id](const std::shared_ptr<Shape>& s) {
-                               return s->getId() == id;
-                           });
+        [id](const std::shared_ptr<Shape>& s) {
+            return s->getId() == id;
+        });
     return (it != shapes.end()) ? *it : nullptr;
 }
+
+// Méthode pour effacer la zone (remplir de pixels vides)
 void Area::clear() {
     for (auto& row : mat) {
         std::fill(row.begin(), row.end(), false);

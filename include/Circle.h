@@ -2,7 +2,7 @@
 # ifndef CIRCLE_H
 # define CIRCLE_H
 # include "Shape.h"
-#include "Point.h"
+# include "Point.h"
 
 class Circle : public Shape {
 private:

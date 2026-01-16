@@ -28,5 +28,13 @@ int main() {
     std::cout << "p1 apres affectation (doit valoir p2) : ";
     p1.print();
 
+    // Test de la méthode toPixels du point
+    std::vector<Pixel> pixels = p2.toPixels();
+    std::cout << "Pixels de p2 : ";
+    for (const auto& pixel : pixels) { 
+        std::cout << "(" << pixel.getX() << ", " << pixel.getY() << ") ";
+    }
+    std::cout << std::endl;
+
     return 0;
 }
