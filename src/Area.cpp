@@ -2,8 +2,7 @@
 # include "Area.h"
 # include <iostream>
 # include <algorithm>
-#include <vector>  
-#include <memory>
+#include "Pixel.h"
 
 Area::Area(unsigned int w, unsigned int h)
 : width(w), height(h), mat(h, std::vector<bool>(w, false)) {}

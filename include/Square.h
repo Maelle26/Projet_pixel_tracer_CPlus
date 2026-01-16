@@ -2,6 +2,7 @@
 # ifndef SQUARE_H
 # define SQUARE_H
 # include "Shape.h"
+#include "Point.h"
 
 class Square : public Shape {
 private:
