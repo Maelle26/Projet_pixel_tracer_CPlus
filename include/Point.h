@@ -1,9 +1,16 @@
 // Déclaration du fichier Point.h
 # ifndef POINT_H
 # define POINT_H
-# include <iostream>
 
-class Point {
+# include <iostream>
+# include <vector>
+# include "Shape.h"
+#include "Pixel.h"
+
+// Déclaration anticipée
+class Pixel;
+
+class Point : public Shape {
 private:
     int posX;
     int posY;
@@ -25,8 +32,12 @@ public:
     void setPosX(int x) { posX = x; }
     void setPosY(int y) { posY = y; }
 
-    // Méthodes
-    void print() const;
+    // Méthode override
+    void print() const override;
+
+    // Méthode override
+    std::vector<Pixel> toPixels() const override;
+    
 
     // Opérateurs
     Point& operator=(const Point& other);

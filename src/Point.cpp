@@ -1,5 +1,8 @@
 // Fichier Point.cpp
 # include "Point.h"
+# include "Pixel.h"
+#include <iostream>
+#include <vector>
 
 //Constructeur par défaut: initialise un point à l'origine (0,0)
 Point::Point() : posX(0), posY(0) {
@@ -42,4 +45,11 @@ Point& Point::operator=(const Point& other) {
 //Méthode pour comparer deux points et vérifier s'ils sont égaux
 bool Point::operator==(const Point& other) const {
     return (posX == other.posX && posY == other.posY);
+}
+
+//Méthode pour convertir le point en une liste de pixels (1 pixel = 1 point)
+std::vector<Pixel> Point::toPixels() const {
+    std::vector<Pixel> pixels;
+    pixels.push_back(Pixel(posX, posY));
+    return pixels;
 }
