@@ -10,15 +10,10 @@ add_executable(pixel_tracer
         src/main.cpp
         src/Point.cpp
         src/Shape.cpp
-        include/Line.h
-        include/Line.h
         src/Line.cpp
-        src/Line.cpp
-        include/Pixel.h
-        src/Pixel.cpp
         src/Pixel.cpp
         src/Circle.cpp
-        include/Circle.h
-        include/Square.h
-        include/Square.h
+        src/Square.cpp
+        src/Rectangle.cpp
+        src/Polygon.cpp
 )
