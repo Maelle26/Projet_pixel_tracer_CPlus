@@ -22,5 +22,5 @@ std::vector<Pixel>Rectangle::toPixels() const {
     // (sera détaiillée dans la partie 2)
     std::vector<Pixel> pixels;
     //...code de l'algorithme
-    return pixels
+    return pixels;
 }
