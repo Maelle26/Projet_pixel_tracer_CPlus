@@ -1,0 +1,8 @@
+//
+// Created by gabby on 30/01/2026.
+//
+
+#ifndef PROJET_PIXEL_TRACER_CPLUS_LAYER_H
+#define PROJET_PIXEL_TRACER_CPLUS_LAYER_H
+
+#endif //PROJET_PIXEL_TRACER_CPLUS_LAYER_H
