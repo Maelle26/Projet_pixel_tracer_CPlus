@@ -2,7 +2,8 @@
 # ifndef CIRCLE_H
 # define CIRCLE_H
 # include "Shape.h"
-# include "Point.h"
+#include "Point.h"
+#include <vector>
 
 class Circle : public Shape {
 private:

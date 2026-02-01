@@ -3,6 +3,7 @@
 # define RECTANGLE_H
 # include "Shape.h"
 #include "Point.h"
+#include <vector>
 
 class Rectangle : public Shape {
 private:

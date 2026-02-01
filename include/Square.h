@@ -3,6 +3,7 @@
 # define SQUARE_H
 # include "Shape.h"
 #include "Point.h"
+#include <vector>
 
 class Square : public Shape {
 private:

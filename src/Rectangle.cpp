@@ -17,8 +17,7 @@ void Rectangle::print() const{
 }
 
 //Méthode pour convertir le rectangle en une liste de pixels
-std::vector<Pixel>Rectangle::toPixels() const {
-    std::vector<Pixel> Rectangle::toPixels() const {
+std::vector<Pixel> Rectangle::toPixels() const {
     std::vector<Pixel> pixels;
     int x = topLeft.getPosX();
     int y = topLeft.getPosY();
@@ -32,12 +31,12 @@ std::vector<Pixel>Rectangle::toPixels() const {
     auto pixelsTop = top.toPixels();
     auto pixelsRight = right.toPixels();
     auto pixelsBottom = bottom.toPixels();
-    
     auto pixelsLeft = left.toPixels();
+
     pixels.insert(pixels.end(), pixelsTop.begin(), pixelsTop.end());
     pixels.insert(pixels.end(), pixelsRight.begin(), pixelsRight.end());
     pixels.insert(pixels.end(), pixelsBottom.begin(), pixelsBottom.end());
     pixels.insert(pixels.end(), pixelsLeft.begin(), pixelsLeft.end());
+
     return pixels;
-}
 }

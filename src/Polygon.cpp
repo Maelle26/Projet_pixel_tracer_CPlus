@@ -1,6 +1,7 @@
 // Fichier Polygon.cpp
 # include "Polygon.h"
 # include "Line.h"
+#include <iostream>
 
 //Constructeur
 Polygon::Polygon() : Shape() {}
@@ -48,5 +49,11 @@ std::vector<Pixel> Polygon::toPixels() const {
         auto linePixels = line.toPixels();
         pixels.insert(pixels.end(), linePixels.begin(), linePixels.end());
     }
+
+    // Fermeture du polygone
+    Line closingLine(points.back(), points.front());
+    auto closingPixels = closingLine.toPixels();
+    pixels.insert(pixels.end(), closingPixels.begin(), closingPixels.end());
+
     return pixels;
 }

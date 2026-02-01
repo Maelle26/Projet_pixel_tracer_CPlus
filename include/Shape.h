@@ -1,7 +1,6 @@
 // Déclaration du fichier Shape.h
 # ifndef SHAPE_H
 # define SHAPE_H
-
 # include <iostream>
 # include <vector>
 
@@ -20,10 +19,9 @@ public:
     // Destructeur virtuel
     virtual ~Shape() = default;
 
-    // Méthode virtuelle pour afficher les informations de la forme
+    // Méthodes virtuelles pures (classe abstraite)
     virtual void print() const = 0;
 
-    // Méthode virtuelles pour appliquer l'algorithme de chaque forme
     virtual std::vector<Pixel> toPixels() const = 0;
     
     // Getter

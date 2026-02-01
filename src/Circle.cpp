@@ -23,7 +23,7 @@ std::vector<Pixel> Circle::toPixels() const {
     int cx = center.getPosX();
     int cy = center.getPosY();
     while (y >= x) {
-        // 8 octants
+// 8 octants
         pixels.push_back(Pixel(cx + x, cy + y));
         pixels.push_back(Pixel(cx + y, cy + x));
         pixels.push_back(Pixel(cx - x, cy + y));
@@ -38,10 +38,9 @@ std::vector<Pixel> Circle::toPixels() const {
         } else if (d < 2 * (radius - y)) {
             d += 2 * y - 1;
             y--;
-        } else {
-            d += 2 * (y - x - 1);
-        y--;
-        x++;
+        } else {d += 2 * (y - x - 1);
+            y--;
+            x++;
         }
     }
     return pixels;
