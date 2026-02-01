@@ -3,6 +3,7 @@
 # define CIRCLE_H
 # include "Shape.h"
 #include "Point.h"
+#include <vector>
 
 class Circle : public Shape {
 private:

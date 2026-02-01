@@ -28,13 +28,13 @@ public:
     void setPosX(int x) { posX = x; }
     void setPosY(int y) { posY = y; }
 
-    // Méthodes override
-    void print() const override;
-    std::vector<Pixel> toPixels() const override;
-
     // Opérateurs
     Point& operator=(const Point& other);
     bool operator==(const Point& other) const;
+
+    // Méthodes override
+    void print() const override;
+    std::vector<Pixel> toPixels() const override;
 };
 
 # endif // POINT_H

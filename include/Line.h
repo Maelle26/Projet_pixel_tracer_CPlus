@@ -28,6 +28,8 @@ public:
 
     // Méthodes override (implémentation des méthodes virtuelles pures)
     void print() const override;
+
+    //Méthode toPixel()
     std::vector<Pixel> toPixels() const override;
 };
 

@@ -16,6 +16,10 @@ add_executable(pixel_tracer
         src/Square.cpp
         src/Rectangle.cpp
         src/Polygon.cpp
-        include/Area.h
         src/Area.cpp
+        include/Command.h
+        src/Command.cpp
+        include/Layer.h
+        src/Layer.cpp
+        include/LayerUtils.h
 )

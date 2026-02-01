@@ -21,6 +21,7 @@ public:
 
     // Méthodes virtuelles pures (classe abstraite)
     virtual void print() const = 0;
+
     virtual std::vector<Pixel> toPixels() const = 0;
     
     // Getter
