@@ -1,5 +1,9 @@
 # Pixel Tracer — Projet C++
 
+## Auteurs
+Maëlle BITSINDOU
+Lucy GROS 
+
 ## 1. Présentation générale
 Pixel Tracer est une application console développée en langage C++ permettant de représenter et de tracer
 des formes géométriques élémentaires sur une grille de pixels. L’affichage est réalisé sous forme de rendu ASCII.
@@ -22,7 +26,8 @@ des formes géométriques élémentaires sur une grille de pixels. L’affichage
 - Polygone (nombre de points libre)
 
 ### 2.3 Interface utilisateur
-- Menu intéractif en ligne de commande
+- Menu général intéractif en ligne de commande
+- Sous-menu intéractif en ligne de commande lorsqu'on entre dans un calque
 
 ## 3. Architecture logicielle
 - `Shape` : classe abstraite représentant une forme géométrique
@@ -51,4 +56,4 @@ Après compilation :
 - Certaines actions nécessitent qu'un calque soit sélectionné au préalable
 
 ### 5.2 Protocole
-Après chaque modifications sur calque il faut sélectionner dessiner puis afficher 
+Après chaque modifications sur calque il faut sélectionner DESSINER puis AFFICHER. 
